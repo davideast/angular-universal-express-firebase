@@ -5,7 +5,7 @@ import { angularUniversal, ServerConfiguration } from 'angular-universal-express
 export type Trigger = functions.TriggerAnnotated & ((req: Express.Request, resp: Express.Response) => void);
 
 export interface FirebaseConfiguration extends ServerConfiguration {
-  staticDirectory: string;
+  staticDirectory?: string;
 }
 
 /**
@@ -26,7 +26,14 @@ export let trigger = (config: FirebaseConfiguration): Trigger => {
  */
 function createExpressApp(config: FirebaseConfiguration) {
   const router = express();
-  router.use(express.static(config.staticDirectory));
+  /** 
+   * An express static directory is not usually neccessary when  
+   * in use with Firebase Hosting. Hosting will always prefer 
+   * existing static assets to dynamic routes. 
+   */
+  if(config.staticDirectory) {
+    router.use(express.static(config.staticDirectory));
+  }
   router.get('/*', angularUniversal(config));
   return router;
 }
