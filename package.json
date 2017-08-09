@@ -1,0 +1,39 @@
+{
+  "name": "angular-universal-express-firebase",
+  "version": "0.0.1",
+  "description": "Run Angular Universal on Cloud Functions and Firebase Hosting",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "node_modules/.bin/tsc -p src/tsconfig.json && cp src/package.json dist/packages-dist"
+  },
+  "keywords": [
+    "firebase",
+    "angular"
+  ],
+  "author": "David East",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "@angular/animations": "^4.2.4",
+    "@angular/common": "^4.2.4",
+    "@angular/compiler": "^4.2.4",
+    "@angular/core": "^4.2.4",
+    "@angular/forms": "^4.2.4",
+    "@angular/http": "^4.2.4",
+    "@angular/platform-browser": "^4.2.4",
+    "@angular/platform-browser-dynamic": "^4.2.4",
+    "@angular/platform-server": "^4.3.3",
+    "@angular/router": "^4.2.4",
+    "@types/express": "^4.0.36",
+    "angular-universal-express": "^0.0.3",
+    "core-js": "^2.4.1",
+    "express": "^4.15.3",
+    "firebase-admin": "^5.1.0",
+    "firebase-functions": "^0.6.1",
+    "rxjs": "^5.4.2",
+    "zone.js": "^0.8.14"
+  }
+}

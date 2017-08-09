@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2015",                          
+    "module": "commonjs",
+    "outDir": "../dist/packages-dist",           
+    "strict": true,
+    "noImplicitAny": true,                 
+    "strictNullChecks": true,             
+    "noImplicitThis": true,                
+    "alwaysStrict": true,
+    "moduleResolution": "node", 
+    "declaration": true
+  }
+}
