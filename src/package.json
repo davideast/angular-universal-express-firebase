@@ -1,6 +1,6 @@
 {
   "name": "angular-universal-express-firebase",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Run Angular Universal on Cloud Functions and Firebase Hosting",
   "main": "index.js",
   "scripts": {
@@ -22,16 +22,16 @@
     "angular-universal-express": "^0.0.3"
   },
   "peerDependencies": {
-    "@angular/animations": "^4.2.4",
-    "@angular/common": "^4.2.4",
-    "@angular/compiler": "^4.2.4",
-    "@angular/core": "^4.2.4",
-    "@angular/forms": "^4.2.4",
-    "@angular/http": "^4.2.4",
-    "@angular/platform-browser": "^4.2.4",
-    "@angular/platform-browser-dynamic": "^4.2.4",
+    "@angular/animations": "^4.3.3",
+    "@angular/common": "^4.3.3",
+    "@angular/compiler": "^4.3.3",
+    "@angular/core": "^4.3.3",
+    "@angular/forms": "^4.3.3",
+    "@angular/http": "^4.3.3",
+    "@angular/platform-browser": "^4.3.3",
+    "@angular/platform-browser-dynamic": "^4.3.3",
     "@angular/platform-server": "^4.3.3",
-    "@angular/router": "^4.2.4",
+    "@angular/router": "^4.3.3",
     "core-js": "^2.4.1",
     "firebase-admin": "^5.1.0",
     "firebase-functions": "^0.6.1",
