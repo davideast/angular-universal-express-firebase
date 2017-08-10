@@ -1,4 +1,9 @@
-# Angular Universal Express Firebase
+<div align="center">
+<h1 align="center">Angular Universal Express Firebase</h1>
+<p align="center">
+A packaged Cloud Function to serve Angular Universal apps.
+</p>
+</div>
 
 ## CommonJS
 ```js
