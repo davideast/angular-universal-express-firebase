@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build": "node_modules/.bin/tsc -p src/tsconfig.json && cp src/package.json dist/packages-dist"
+    "build": "node_modules/.bin/tsc -p src/tsconfig.json && cp src/package.json dist/packages-dist && cp README.md dist/packages-dist"
   },
   "keywords": [
     "firebase",
