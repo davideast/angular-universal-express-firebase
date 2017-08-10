@@ -16,10 +16,11 @@ npm i angular-universal-express-firebase
 const { angularUniversal } = require('angular-universal-firebase-hosting');
 exports.trigger = angularUniversal.trigger({
   index: 'path/to/index.html',
-  main: 'path/to/bundle.longhash.js',
+  main: 'path/to/bundle.longhash',
   enableProdMode: true,
   cdnCacheExpiry: 600,
-  browserCacheExpiry: 300
+  browserCacheExpiry: 300,
+  staleWhileRevalidate: 120
 });
 ```
 
@@ -28,10 +29,11 @@ exports.trigger = angularUniversal.trigger({
 import { angularUniversal } from 'angular-universal-firebase-hosting';
 export let trigger = angularUniversal.trigger({
   index: 'path/to/index.html',
-  main: 'path/to/bundle.longhash.js',
+  main: 'path/to/bundle.longhash',
   enableProdMode: true,
   cdnCacheExpiry: 600,
-  browserCacheExpiry: 300  
+  browserCacheExpiry: 300,
+  staleWhileRevalidate: 120  
 });
 ```
 
@@ -76,10 +78,11 @@ firebase init functions
 const { angularUniversal } = require('angular-universal-firebase-hosting');
 exports.trigger = angularUniversal.trigger({
   index: __dirname + 'dist-server/index.html',
-  main: __dirname + '/bundle.<generated-hash>.js', // make sure this points at the correct hash
+  main: __dirname + '/bundle.<generated-hash>', // make sure this points at the correct hash
   enableProdMode: true,
   cdnCacheExpiry: 600, // cache in the CDN for 10 minutes
-  browserCacheExpiry: 300 // cache in the browser for 5 minutes
+  browserCacheExpiry: 300, // cache in the browser for 5 minutes
+  staleWhileRevalidate: 120 // serve a stale version for 2 minutes after cdnCacheExpiry, but refresh CDN in background
 });
 ```
 
