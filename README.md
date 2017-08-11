@@ -10,6 +10,7 @@
 ```bash
 npm i angular-universal-express-firebase
 ```
+NB: Run this command _afer_ initialzing functions and from within the `functions` folder
 
 ## Basic Usage
 ```js
