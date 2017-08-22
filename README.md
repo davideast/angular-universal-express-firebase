@@ -46,8 +46,10 @@ The current RC version of the Angular CLI covers the server build. [Follow these
 ### Cloud Functions as the server
 
 #### Build both browser and server Angular builds
-At this point you should have two app entries in your `angularcli.json` file: **browser** and **server**. The browser
-build writes to the `dist` folder and the server build writes to the `dist-server` folder. 
+You may want to use the `--output-hashing none` flag with your universal build to avoid needing to change the hash
+with each build in your function.js. At this point you should have two app entries in your `angularcli.json`
+file: **browser** and **server**. The browser build writes to the `dist` folder and the server build writes to the
+`dist-server` folder. 
 
 #### Delete `dist/index.html`. 
 This index file is uneeded because Angular Universal uses the assets in `dist-server` to generate the initial HTML.
@@ -78,7 +80,8 @@ firebase init functions
 const angularUniversal = require('angular-universal-firebase-hosting');
 exports.trigger = angularUniversal.trigger({
   index: __dirname + 'dist-server/index.html',
-  main: __dirname + '/bundle.<generated-hash>', // make sure this points at the correct hash
+  // make sure this points at the correct hash, or use the --output-hashing none flag on your ng build.
+  main: __dirname + '/bundle.<generated-hash>',
   enableProdMode: true,
   cdnCacheExpiry: 600, // cache in the CDN for 10 minutes
   browserCacheExpiry: 300, // cache in the browser for 5 minutes
