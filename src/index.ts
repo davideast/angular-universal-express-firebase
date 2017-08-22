@@ -49,7 +49,7 @@ function createExpressApp(config: FirebaseConfiguration) {
 }
 
 function valueExists(value?: any) {
-  return typeof value !== 'undefined' || value !== null;
+  return !(typeof value === 'undefined' || value === null);
 }
 
 /**
