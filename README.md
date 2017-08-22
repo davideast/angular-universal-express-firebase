@@ -14,7 +14,7 @@ NB: Run this command _afer_ initialzing functions and from within the `functions
 
 ## Basic Usage
 ```js
-const angularUniversal = require('angular-universal-firebase-hosting');
+const angularUniversal = require('angular-universal-express-firebase');
 exports.trigger = angularUniversal.trigger({
   index: 'path/to/index.html',
   main: 'path/to/bundle.longhash',
@@ -27,7 +27,7 @@ exports.trigger = angularUniversal.trigger({
 
 ## TypeScript usage
 ```ts
-import * as angularUniversal from 'angular-universal-firebase-hosting';
+import * as angularUniversal from 'angular-universal-express-firebase';
 export let trigger = angularUniversal.trigger({
   index: 'path/to/index.html',
   main: 'path/to/bundle.longhash',
@@ -76,7 +76,7 @@ firebase init functions
 #### Open `functions/index.js` and add the following code.
 
 ```js
-const angularUniversal = require('angular-universal-firebase-hosting');
+const angularUniversal = require('angular-universal-express-firebase');
 exports.trigger = angularUniversal.trigger({
   index: __dirname + 'dist-server/index.html',
   main: __dirname + '/bundle.<generated-hash>', // make sure this points at the correct hash
