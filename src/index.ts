@@ -42,6 +42,7 @@ function createExpressApp(config: FirebaseConfiguration) {
   // middleware that applies a Cache-Control header to each dynamic response
   router.use((req, res, next) => {
     res.set('Cache-Control', cacheControlValue);
+    next();
   });
   
   router.get('/*', angularUniversal(config));
