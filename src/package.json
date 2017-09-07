@@ -1,6 +1,6 @@
 {
   "name": "angular-universal-express-firebase",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Run Angular Universal on Cloud Functions and Firebase Hosting",
   "main": "index.js",
   "scripts": {
