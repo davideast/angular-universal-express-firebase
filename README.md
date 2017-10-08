@@ -21,7 +21,14 @@ exports.trigger = angularUniversal.trigger({
   enableProdMode: true,
   cdnCacheExpiry: 600,
   browserCacheExpiry: 300,
-  staleWhileRevalidate: 120
+  staleWhileRevalidate: 120,
+  routes: [
+    '/route1/*',
+    '/route2/*',
+    .
+    .
+    .
+  ]
 });
 ```
 

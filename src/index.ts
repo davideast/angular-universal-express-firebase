@@ -9,6 +9,7 @@ export interface FirebaseConfiguration extends ServerConfiguration {
   cdnCacheExpiry: number;
   browserCacheExpiry: number;
   staleWhileRevalidate?: number;
+  routes?: Array<string>;
 }
 
 /**
@@ -46,6 +47,13 @@ function createExpressApp(config: FirebaseConfiguration) {
   });
   
   router.get('/*', angularUniversal(config));
+  
+  // adding routes for the server
+  if(config.routes) {
+    config.routes.forEach(route => {
+      router.get(route, angularUniversal(config));
+    });
+  }
   return router;
 }
 
