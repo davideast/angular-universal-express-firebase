@@ -22,6 +22,9 @@ exports.trigger = angularUniversal.trigger({
   cdnCacheExpiry: 600,
   browserCacheExpiry: 300,
   staleWhileRevalidate: 120
+  extraProviders: [
+      provideModuleMap(LAZY_MODULE_MAP)
+  ]
 });
 ```
 
