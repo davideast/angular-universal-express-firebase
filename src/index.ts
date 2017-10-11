@@ -1,3 +1,4 @@
+import { Provider } from '@angular/core';
 import * as functions from 'firebase-functions';
 import * as express from 'express';
 import { angularUniversal, ServerConfiguration } from 'angular-universal-express';
@@ -9,6 +10,7 @@ export interface FirebaseConfiguration extends ServerConfiguration {
   cdnCacheExpiry: number;
   browserCacheExpiry: number;
   staleWhileRevalidate?: number;
+  extraProviders?: Provider[]
 }
 
 /**
